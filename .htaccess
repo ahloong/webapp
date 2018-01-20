@@ -1,0 +1,14 @@
+DirectoryIndex index.php
+RewriteEngine On  
+  # If an existing asset or directory is requested go to it as it is
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+  RewriteRule ^ - [L]
+
+  # If the requested resource doesn't exist, use index.php
+  RewriteRule ^create(.*)$ create.php [L]
+  RewriteRule ^login(.*)$ login.php [L]
+  RewriteRule ^login(.*)$ logout.php [L]
+  RewriteRule ^(.*)$ detail.php [L]
+  RewriteRule ^ index.php
+

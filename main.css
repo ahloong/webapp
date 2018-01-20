@@ -1,0 +1,140 @@
+html, body {
+    margin: 0;
+}
+
+.bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#385C8E;
+    display: flex;
+    flex-direction: row;
+}
+.left_button {
+    float: left;
+}
+.right_button {
+    float: right;
+}
+.bar_word {
+    display: block;
+    color:white;
+    padding: 16px 40px;
+    text-decoration: none;
+    text-align: center;
+}
+.left_button:hover:not(.active) {
+    background-color: #A56C0F;
+}
+.active{
+    background-color: #2C2B2C;
+}
+header {
+    background-color: gold;
+    font-size: 300%;
+    height: 40%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 24px;           
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+}
+.create_form{
+    margin: 0 auto;
+    width: 80%;
+}
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+}
+.event {
+    width: 80%;
+    padding: 8px;
+    margin: 0 auto;
+
+}
+.event_date, .event_location, .event_state {
+    display: inline-block;
+    font-size: 18px;
+    padding: 7px;
+}
+.event_title {
+    font-size: 36px;
+}
+.event_item {
+    padding: 24px;
+    
+}
+.login_form {
+    margin: 0 auto;
+    width: 60%;
+    padding: 12px;
+}
+.submit_button {
+    width: 30%;   
+}
+.button {
+    background-color: white;
+    /* color: black;border: 2px solid #555555; */
+    cursor: pointer;
+    width: 30%;
+    transition-duration: 0.4s;
+    box-shadow: -1px 2px 1px 0px rgba(0,0,0,0.2);
+}
+
+.button:hover {
+    background-color: #555555;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.login_text {
+    text-align: center;
+    font-size: 36px;
+}
+.event_detail {
+    display: flex;
+    flex-direction: row;
+    max-height: 100%;
+    background-color: cornsilk;
+    
+}
+.event_name_desc {
+    display: flex;
+    flex-direction: column;
+    background-color: cadetblue;
+    flex-grow: 1;
+}
+.event_loc_time {
+    display: flex;
+    flex-direction: column;
+    background-color: darkgray;
+}
+.empty {
+    flex-grow: 1;
+}
+.no_deco {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:640px) {
+    .event_detail {
+        flex-direction: column;
+    }
+}
