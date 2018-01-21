@@ -8,17 +8,6 @@
     while ($mmm = $name->fetch()) {
         $dddd = $mmm['userName'];
      }
-    // $getnum =$_SERVER['REQUEST_URI'];
-    // $sql = 'SELECT eventName,
-    //             eventLocation,
-    //             eventState,
-    //             eventDate,
-    //             eventID
-    //         FROM event
-    //         where eventID = $getnum';
-    // $pdo->prepare($sql);
-    // $sql->execute;
-
     $eventID = trim($_SERVER['REQUEST_URI'], '/');
     $sql = $pdo->prepare('SELECT * FROM event WHERE eventID = ?');
     $sql->bindParam(1, $eventID, PDO::PARAM_INT);
@@ -75,7 +64,8 @@
             <p><?php echo $sql['eventDesc'] ?></p>
         </div>
         <div class='event_loc_time'>
-            <p><?php echo $sql['eventLocation'] . $sql['eventDate'] ?></p>
+            <p><?php echo $sql['eventLocation']?></p>
+            <p><?php echo $sql['eventDate'] ?> </p>
         </div>
     </div>
 </body>

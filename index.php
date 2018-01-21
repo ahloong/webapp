@@ -65,7 +65,6 @@
         <h1 style="text-align:center">All Event</h1>
         
             <div class="event">
-            
                 <?php while ($row = $q->fetch()): ?>
                 <?php echo '<a class="no_deco" href=/' . htmlspecialchars($row['eventID']) . '>' ?>
                     <div class="event_item">

@@ -1,5 +1,6 @@
 html, body {
     margin: 0;
+    background-color: beige
 }
 
 .bar {
@@ -25,7 +26,8 @@ html, body {
     text-align: center;
 }
 .left_button:hover:not(.active) {
-    background-color: #A56C0F;
+    background-color: #6666cc;
+
 }
 .active{
     background-color: #2C2B2C;
@@ -57,18 +59,23 @@ input, textarea, select {
     width: 80%;
     padding: 8px;
     margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 .event_date, .event_location, .event_state {
     display: inline-block;
     font-size: 18px;
     padding: 7px;
+    background-color: #ff5050;
+    inline-size: 100%;
+    color: white;
 }
 .event_title {
     font-size: 36px;
 }
 .event_item {
     padding: 24px;
+    background-color: #00cc66;
     
 }
 .login_form {
@@ -101,7 +108,7 @@ input, textarea, select {
     display: flex;
     flex-direction: row;
     max-height: 100%;
-    background-color: cornsilk;
+    flex-grow: 1;
     
 }
 .event_name_desc {
@@ -122,7 +129,9 @@ input, textarea, select {
     text-decoration: none;
     color: black;
 }
-
+.white_bar {
+    background-color: beige;
+}
 
 
 
