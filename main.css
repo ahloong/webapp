@@ -1,39 +1,45 @@
 html, body {
     margin: 0;
-    background-color: beige
+    background-color: white;
 }
-
+body.active{
+    overflow: hidden;
+}
 .bar {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color:#385C8E;
+    background-color:#000000;
+    border-bottom:8px solid #9bcbd1;
     display: flex;
     flex-direction: row;
 }
-.left_button {
+.bar .left_button {
     float: left;
 }
-.right_button {
+.bar .right_button {
     float: right;
 }
-.bar_word {
+.bar .bar_word {
     display: block;
     color:white;
     padding: 16px 40px;
     text-decoration: none;
     text-align: center;
 }
-.left_button:hover:not(.active) {
+.bar .left_button:hover:not(.active) {
     background-color: #6666cc;
 
 }
-.active{
+.bar .active{
     background-color: #2C2B2C;
 }
 header {
-    background-color: gold;
+    background:url("victoriasview.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
     font-size: 300%;
     height: 40%;
     margin: 0 auto;
@@ -43,6 +49,19 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.backgroud_overlay {
+    position: absolute;
+    background: #00000063;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+.title {
+    color: white;
+    z-index: 9;
+    font-weight: 400;
+    font-size: 38px;
 }
 body {
     font-family: 'Rubik', sans-serif;
@@ -55,27 +74,32 @@ input, textarea, select {
     width: 100%;
     padding: 8px;
 }
+.all_event {
+    text-align:center;
+    font-weight:400;
+}
 .event {
-    width: 80%;
-    padding: 8px;
+    width: calc(100% - 24px);
     margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 8px;
+    max-width: 860px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 .event_date, .event_location, .event_state {
     display: inline-block;
     font-size: 18px;
-    padding: 7px;
-    background-color: #ff5050;
+    padding: 2px;
+    background-color: white;
     inline-size: 100%;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .event_title {
     font-size: 36px;
 }
 .event_item {
     padding: 24px;
-    background-color: #00cc66;
+    background-color: white;
     
 }
 .login_form {
@@ -132,12 +156,62 @@ input, textarea, select {
 .white_bar {
     background-color: beige;
 }
+.drawer {
+    position: fixed;
+    z-index: 1;
+    width: 256px;
+    height: 100%;
+    top: 0;
+    transition: all 200ms ease-in-out;
+    left: -260px;
+    background: white;  
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2); 
+}
+.drawer.active{
+    left: 0;
+}
+.drawer a{
+    text-decoration: none;
+    padding: 12px;
+}
+.drawer div div{
+    text-decoration: none;
+    padding: 36px;
+}
+.drawer a.active {
+    background-color: cornflowerblue;
+}
+.drawer a:hover{
+    background-color: tomato;
+}
+.hamburger {
+    display: none;
+    width: 24px;
+    height: 24px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 24px;
+    cursor: pointer;
+}
+.kosong {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+    pointer-events: none;
 
-
-
-
-
-
+}
+.kosong.active {
+    opacity: 0.5;
+    pointer-events: visible;
+}
 
 
 
@@ -145,5 +219,11 @@ input, textarea, select {
 @media screen and (max-width:640px) {
     .event_detail {
         flex-direction: column;
+    }
+    .hamburger {
+        display: block;
+    }
+    .bar {
+        display: none;
     }
 }

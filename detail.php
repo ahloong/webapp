@@ -68,5 +68,7 @@
             <p><?php echo $sql['eventDate'] ?> </p>
         </div>
     </div>
+<a href=<?php echo '/edit'. '/' . $eventID  ?>>Edit</a>
+<a href=<?php echo '/delete'. '/' . $eventID  ?>>Delete</a> 
 </body>
 </html>

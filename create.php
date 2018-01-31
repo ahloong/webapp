@@ -25,31 +25,56 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
 </head>
 <body>
-    <header style="text-align:center">
-        KKL dont want eat pokemon
-    </header>
-    <div class="bar">
-    <div class="left_button">
-        <a class= "bar_word" href="/">Home</a>
-    </div>
-    <div class="left_button">
-        <a class="bar_word active" href="/create">Create</a>    
-    </div>
-    <div class="empty"></div>
-    <div>
-        <?php if (isset($_SESSION['authenticated'])) {
-                echo'<a class="active bar_word" href="/logout.php">Log Out</a>';
-            }else {
-                echo '<a class="active bar_word right_button" href="/login.php">Log In</a>';
-            }
-        ?>
-    </div>
-    <div>
-    <?php if (isset($_SESSION['authenticated'])) {
-                echo '<div class="bar_word right_button">Hello, ' . $dddd . '</div>';
-            }
+<header>
+<img src="Hamburger_icon.png" alt="Mcdonalds" class='hamburger' onclick="opensesame()">
+KKL dont want eat pokemon
+</header>
+
+<!-- drawer -->
+<div class="drawer">
+<div>
+<?php if (isset($_SESSION['authenticated'])) {
+            echo '<div class="bar_word right_button">Hello, ' . $dddd . '</div>';
+        }
+?>
+</div>
+<a href="/" class="active">Home</a>
+<a href="/create">Create</a>
+<?php 
+    if (isset($_SESSION['authenticated'])) {
+        echo '<a href="/logout.php">Log Out</a>';
+    } else {
+        echo '<a href="/login.php">Log In</a>';
+    }
+?>
+</div>	
+
+<div class='kosong' onclick="closesesame()"></div>
+<!-- toolbar -->
+<div class="bar">
+<div class="left_button">
+    <a class="active bar_word" href="/">Home</a>
+</div>
+<div class="left_button">
+    <a class="bar_word" href="/create">Create</a>
+</div>
+<div class="empty"></div>
+<div>
+    <?php 
+        if (isset($_SESSION['authenticated'])) {
+            echo'<a class="active bar_word right_button" href="/logout.php">Log Out</a>';
+        } else {
+            echo '<a class="active bar_word right_button" href="/login.php">Log In</a>';
+        }
     ?>
-    </div>
+</div>
+<div>
+    <?php 
+        if (isset($_SESSION['authenticated'])) {
+            echo '<div class="right_button bar_word">Hello, ' . $dddd . '</div>';
+        }
+    ?>
+</div>
 </div>
     
     <form class="create_form" action="/create_post.php" method="post">

@@ -9,6 +9,7 @@ RewriteEngine On
   RewriteRule ^create(.*)$ create.php [L]
   RewriteRule ^login(.*)$ login.php [L]
   RewriteRule ^login(.*)$ logout.php [L]
+  RewriteRule ^edit(.*)$ edit.php [L]
+  RewriteRule ^delete(.*)$ delete.php [L]
   RewriteRule ^(.*)$ detail.php [L]
   RewriteRule ^ index.php
-
