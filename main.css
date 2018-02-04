@@ -36,7 +36,7 @@ body.active{
     background-color: #2C2B2C;
 }
 header {
-    background:url("victoriasview.jpg");
+    background:url("smaller_victoriasview.jpeg");
     background-position: center;
     background-size: cover;
     position: relative;
@@ -59,7 +59,7 @@ header {
 }
 .title {
     color: white;
-    z-index: 9;
+    z-index: 1;
     font-weight: 400;
     font-size: 38px;
 }
@@ -99,7 +99,6 @@ input, textarea, select {
 }
 .event_item {
     padding: 24px;
-    background-color: white;
     
 }
 .login_form {
@@ -129,22 +128,27 @@ input, textarea, select {
     font-size: 36px;
 }
 .event_detail {
+    padding: 24px;
     display: flex;
     flex-direction: row;
-    max-height: 100%;
     flex-grow: 1;
-    
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 85%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .event_name_desc {
     display: flex;
     flex-direction: column;
-    background-color: cadetblue;
     flex-grow: 1;
 }
 .event_loc_time {
+    padding: 24px;
     display: flex;
+    flex-grow: 0.2;
     flex-direction: column;
-    background-color: darkgray;
+    background-color: #ebebeb;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .empty {
     flex-grow: 1;

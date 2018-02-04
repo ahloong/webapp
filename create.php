@@ -26,17 +26,18 @@
 </head>
 <body>
 <header>
-<img src="Hamburger_icon.png" alt="Mcdonalds" class='hamburger' onclick="opensesame()">
-KKL dont want eat pokemon
+    <div class="backgroud_overlay"></div>
+    <img src="Hamburger_icon.png" alt="Mcdonalds" class='hamburger' onclick="opensesame()">
+    <h1 class="title">Event Management System</h1> 
 </header>
 
 <!-- drawer -->
 <div class="drawer">
 <div>
-<?php if (isset($_SESSION['authenticated'])) {
+    <?php if (isset($_SESSION['authenticated'])) {
             echo '<div class="bar_word right_button">Hello, ' . $dddd . '</div>';
-        }
-?>
+    }
+    ?>
 </div>
 <a href="/" class="active">Home</a>
 <a href="/create">Create</a>
@@ -47,9 +48,9 @@ KKL dont want eat pokemon
         echo '<a href="/login.php">Log In</a>';
     }
 ?>
-</div>	
-
+</div>
 <div class='kosong' onclick="closesesame()"></div>
+
 <!-- toolbar -->
 <div class="bar">
 <div class="left_button">
@@ -75,6 +76,8 @@ KKL dont want eat pokemon
         }
     ?>
 </div>
+
+<!-- content -->
 </div>
     
     <form class="create_form" action="/create_post.php" method="post">

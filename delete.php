@@ -12,9 +12,23 @@
             $sqlpostdetails = $pdo->prepare("DELETE FROM event WHERE eventID = ?");
             $sqlpostdetails->bindParam(1, $eventID, PDO::PARAM_INT);
             $sqlpostdetails->execute();
-            echo 'deleted';
+            $delected = "deleted";
+            $index = "/";
+            echo "
+                <script type=\"text/javascript\">
+                    alert('$delected');
+                    window.location.href='$index';
+                </script>
+            ";
         }
         else {
-        echo 'no';
+            $wrong = "Wrong";
+            $index = "/";
+            echo "
+                <script type=\"text/javascript\">
+                    alert('$wrong');
+                    window.location.href='$index';
+                </script>
+            ";
     }
 ?>

@@ -18,8 +18,6 @@
     $sql->bindParam(1, $eventID, PDO::PARAM_INT);
     $sql->execute();
     $sql = $sql->fetch(PDO::FETCH_ASSOC);
-
-    echo $eventID;
 ?>
 
 
@@ -36,33 +34,60 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
 </head>
 <body>
-    <header style="text-align:center">
-        KKL dont want eat pokemon
-    </header>
+<header>
+<div class="backgroud_overlay"></div>
+<img src="Hamburger_icon.png" alt="Mcdonalds" class='hamburger' onclick="opensesame()">
+<h1 class="title">Event Management System</h1> 
+</header>
+
+<!-- drawer -->
+<div class="drawer">
+<div>
+    <?php if (isset($_SESSION['authenticated'])) {
+            echo '<div class="bar_word right_button">Hello, ' . $dddd . '</div>';
+        }
+    ?>
+    </div>
+    <a href="/" class="active">Home</a>
+    <a href="/create">Create</a>
+    <?php 
+    if (isset($_SESSION['authenticated'])) {
+        echo '<a href="/logout.php">Log Out</a>';
+    } else {
+        echo '<a href="/login.php">Log In</a>';
+    }
+    ?>
+</div>
+<div class='kosong' onclick="closesesame()"></div>
+
+<!-- toolbar -->
     <div class="bar">
     <div class="left_button">
-        <a class= "bar_word" href="/">Home</a>
+    <a class="bar_word" href="/">Home</a>
     </div>
     <div class="left_button">
-        <a class="bar_word active" href="/create">Create</a>    
+    <a class="bar_word" href="/create">Create</a>
     </div>
     <div class="empty"></div>
     <div>
-        <?php if (isset($_SESSION['authenticated'])) {
-                echo'<a class="active bar_word" href="/logout.php">Log Out</a>';
-            }else {
+    <?php 
+        if (isset($_SESSION['authenticated'])) {
+            echo'<a class="active bar_word right_button" href="/logout.php">Log Out</a>';
+        } else {
                 echo '<a class="active bar_word right_button" href="/login.php">Log In</a>';
             }
         ?>
     </div>
     <div>
-    <?php if (isset($_SESSION['authenticated'])) {
-                echo '<div class="bar_word right_button">Hello, ' . $dddd . '</div>';
+    <?php 
+        if (isset($_SESSION['authenticated'])) {
+            echo '<div class="right_button bar_word">Hello, ' . $dddd . '</div>';
             }
     ?>
     </div>
 </div>
 
+<!-- content -->
 <form class="create_form" action="/edit_post.php" method="post">
         <h1>Edit An Event</h1>
         <label>

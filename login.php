@@ -37,17 +37,32 @@
     
 </head>
 <body>
-    <header style="text-align:center">
-        KKL dont want eat pokemon
-    </header>
-    <div class="bar">
-    <div class="left_button">
-        <a class="bar_word" href="/">Home</a>
-    </div>
-    <div class="left_button">
-        <a class="bar_word" href="/create">Create</a>    
-    </div>
-    <div class="empty"></div>
+<header>
+    <div class="backgroud_overlay"></div>
+    <img src="Hamburger_icon.png" alt="Mcdonalds" class='hamburger' onclick="opensesame()">
+    <h1 class="title">Event Management System</h1> 
+</header>
+
+<!-- drawer -->
+<div class="drawer">
+    <a href="/" class="active">Home</a>
+    <a href="/create">Create</a>
+</div>	
+
+<div class='kosong' onclick="closesesame()"></div>
+
+<!-- toolbar -->
+<div class="bar">
+<div class="left_button">
+    <a class="bar_word" href="/">Home</a>
+</div>
+<div class="left_button">
+    <a class="bar_word" href="/create">Create</a>
+</div>
+<div class="empty"></div>
+</div>
+
+<!-- content -->
 </div>
     <p></p>
     <form method="post" class="login_form">
