@@ -6,6 +6,7 @@ function opensesame() {
     var bulbasaur = document.querySelector("body");
     bulbasaur.classList.add("active");
 }
+
 function closesesame() {
     var raichu = document.querySelector(".drawer");
     raichu.classList.remove("active");

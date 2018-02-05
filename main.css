@@ -2,41 +2,49 @@ html, body {
     margin: 0;
     background-color: white;
 }
-body.active{
+
+body.active {
     overflow: hidden;
 }
+
 .bar {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color:#000000;
-    border-bottom:8px solid #9bcbd1;
+    background-color: #000000;
+    border-bottom: 8px solid #9bcbd1;
     display: flex;
     flex-direction: row;
 }
+
 .bar .left_button {
     float: left;
 }
+
 .bar .right_button {
     float: right;
 }
+
 .bar .bar_word {
     display: block;
-    color:white;
+    color: white;
     padding: 16px 40px;
     text-decoration: none;
     text-align: center;
 }
+
 .bar .left_button:hover:not(.active) {
     background-color: #6666cc;
 
 }
-.bar .active{
+
+.bar .active {
     background-color: #2C2B2C;
 }
+
 header {
-    background:url("smaller_victoriasview.jpeg");
+    background: url("smaller_victoriasview.jpeg");
     background-position: center;
     background-size: cover;
     position: relative;
@@ -44,12 +52,13 @@ header {
     height: 40%;
     margin: 0 auto;
     text-align: center;
-    padding: 0 24px;           
+    padding: 0 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .backgroud_overlay {
     position: absolute;
     background: #00000063;
@@ -57,27 +66,33 @@ header {
     width: 100%;
     top: 0;
 }
+
 .title {
     color: white;
     z-index: 1;
     font-weight: 400;
     font-size: 38px;
 }
+
 body {
     font-family: 'Rubik', sans-serif;
 }
-.create_form{
+
+.create_form {
     margin: 0 auto;
     width: 80%;
 }
+
 input, textarea, select {
     width: 100%;
     padding: 8px;
 }
+
 .all_event {
-    text-align:center;
-    font-weight:400;
+    text-align: center;
+    font-weight: 400;
 }
+
 .event {
     width: calc(100% - 24px);
     margin: 0 auto;
@@ -86,6 +101,7 @@ input, textarea, select {
     max-width: 860px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .event_date, .event_location, .event_state {
     display: inline-block;
     font-size: 18px;
@@ -94,39 +110,46 @@ input, textarea, select {
     inline-size: 100%;
     color: rgb(0, 0, 0);
 }
+
 .event_title {
     font-size: 36px;
 }
+
 .event_item {
     padding: 24px;
-    
+
 }
+
 .login_form {
     margin: 0 auto;
     width: 60%;
     padding: 12px;
 }
+
 .submit_button {
-    width: 30%;   
+    width: 30%;
 }
+
 .button {
     background-color: white;
     /* color: black;border: 2px solid #555555; */
     cursor: pointer;
     width: 30%;
     transition-duration: 0.4s;
-    box-shadow: -1px 2px 1px 0px rgba(0,0,0,0.2);
+    box-shadow: -1px 2px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
 .button:hover {
     background-color: #555555;
     color: white;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
+
 .login_text {
     text-align: center;
     font-size: 36px;
 }
+
 .event_detail {
     padding: 24px;
     display: flex;
@@ -137,11 +160,13 @@ input, textarea, select {
     max-width: 85%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .event_name_desc {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
+
 .event_loc_time {
     padding: 24px;
     display: flex;
@@ -150,16 +175,20 @@ input, textarea, select {
     background-color: #ebebeb;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .empty {
     flex-grow: 1;
 }
+
 .no_deco {
     text-decoration: none;
     color: black;
 }
+
 .white_bar {
     background-color: beige;
 }
+
 .drawer {
     position: fixed;
     z-index: 1;
@@ -168,28 +197,34 @@ input, textarea, select {
     top: 0;
     transition: all 200ms ease-in-out;
     left: -260px;
-    background: white;  
+    background: white;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2); 
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
-.drawer.active{
+
+.drawer.active {
     left: 0;
 }
-.drawer a{
+
+.drawer a {
     text-decoration: none;
     padding: 12px;
 }
-.drawer div div{
+
+.drawer div div {
     text-decoration: none;
     padding: 36px;
 }
+
 .drawer a.active {
     background-color: cornflowerblue;
 }
-.drawer a:hover{
+
+.drawer a:hover {
     background-color: tomato;
 }
+
 .hamburger {
     display: none;
     width: 24px;
@@ -200,6 +235,7 @@ input, textarea, select {
     margin: 24px;
     cursor: pointer;
 }
+
 .kosong {
     background-color: black;
     width: 100%;
@@ -212,21 +248,21 @@ input, textarea, select {
     pointer-events: none;
 
 }
+
 .kosong.active {
     opacity: 0.5;
     pointer-events: visible;
 }
 
-
-
-
-@media screen and (max-width:640px) {
+@media screen and (max-width: 640px) {
     .event_detail {
         flex-direction: column;
     }
+
     .hamburger {
         display: block;
     }
+
     .bar {
         display: none;
     }

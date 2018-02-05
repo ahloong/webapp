@@ -1,10 +1,10 @@
 <?php
 
-    session_start();
+session_start();
 
-    unset($_SESSION['authenticated']);
-    
-    session_destroy();
+unset($_SESSION['authenticated']);
 
-    header("Location: /index");
+session_destroy();
+
+header("Location: /index");
 ?>  
