@@ -2,10 +2,14 @@
 session_start();
 
 require_once 'config.php';
+
+// show username
 $name = $pdo->query('SELECT * FROM user');
 while ($mmm = $name->fetch()) {
     $dddd = $mmm['userName'];
 }
+
+// select everything thing from event table
 $sql = 'SELECT eventName,
                 eventLocation,
                 eventState,
@@ -56,6 +60,7 @@ $q->setFetchMode(PDO::FETCH_ASSOC);
 </div>
 
 <div class='kosong' onclick="closesesame()"></div>
+
 <!-- toolbar -->
 <div class="bar">
     <div class="left_button">

@@ -99,7 +99,13 @@ if (!$sql) {
         <p><?php echo $sql['eventDate'] ?> </p>
     </div>
 </div>
-<a href=<?php echo '/edit' . '/' . $eventID ?>>Edit</a>
-<a href=<?php echo '/delete' . '/' . $eventID ?>>Delete</a>
+<br>
+<br>
+<?php
+if (isset($_SESSION['authenticated'])) {
+    echo '<button><a class="button_edit_delete" href=  /edit/' .$eventID . '>Edit</a></button>';
+    echo '<button><a class="button_edit_delete" href=  /delete/' . $eventID . '>Delete</a></button>';
+}
+?>
 </body>
 </html>

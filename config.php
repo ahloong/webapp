@@ -1,6 +1,8 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('log_errors', 1);
+
+//debug
+//ini_set('display_errors', 1);
+//ini_set('log_errors', 1);
 
 $dbusername = 'root'; //Database Username
 $dbpassword = ''; //Database Password

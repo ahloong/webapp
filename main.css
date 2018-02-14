@@ -130,6 +130,22 @@ input, textarea, select {
     width: 30%;
 }
 
+button {
+    background-color: white;
+    cursor: pointer;
+    width: 30%;
+    transition-duration: 0.4s;
+    box-shadow: -1px 2px 1px 0px rgba(0, 0, 0, 0.2);
+    padding: 7px;
+
+}
+
+button:hover {
+    background-color: #555555;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
 .button {
     background-color: white;
     /* color: black;border: 2px solid #555555; */
